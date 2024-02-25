@@ -1,0 +1,31 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ buttonCaption }}</h4>
+    <button type="button" class="btn-close btn-lg btn-outline-primary" aria-label="Close"
+            (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div>
+      <form [formGroup]="form">
+        <div class="input-block btn btn-lg btn-outline-primary">
+          <label>Title:</label>
+          <input class="input" formControlName="title">
+        </div>
+
+
+        <div class="input-block btn btn-lg btn-outline-primary">
+          <label>Price:</label>
+          <input class="input"  type="number" formControlName="price">
+        </div>
+
+      </form>
+      <button *ngIf="buttonCaption === 'Edit'" class="btn btn-lg btn-outline-primary" (click)="editProduct()">Edit</button>
+      <button *ngIf="buttonCaption === 'Add Goods'" class="btn btn-lg btn-outline-primary" (click)="addProduct()">Add</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">{{ buttonCaption }}</button>
+

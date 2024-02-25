@@ -1,0 +1,22 @@
+.frame {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.span {
+  margin-right: 10px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+}
+
+.buttons-box {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}

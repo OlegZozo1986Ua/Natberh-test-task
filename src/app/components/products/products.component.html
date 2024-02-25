@@ -1,0 +1,18 @@
+<div class="main-box">
+  <div class="header">
+    <h2 class="">Products list</h2>
+    <app-edit-add-modal
+      buttonCaption="Add Goods"
+      (changeProducts)="getProducts()"
+    ></app-edit-add-modal>
+  </div>
+
+  <div class="products-list">
+    <app-products-list
+      *ngFor="let product of products"
+      [product]="product"
+      (changeProducts)="getProducts()"
+    >
+    </app-products-list>
+  </div>
+</div>

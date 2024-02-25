@@ -1,0 +1,18 @@
+<div class="frame">
+  <div class="wrapper">
+    <span class="span">{{ product.id }}.</span>
+    <span class="span">{{ product.title }}.</span>
+  </div>
+  <div class="wrapper">
+    <span class="span">Price: {{product.price | currency: 'UAH '}}</span>
+    <div class="buttons-box">
+      <app-edit-add-modal
+        buttonCaption="Edit"
+        [product]="product"
+        (changeProducts)="emitEditEvent()"
+      ></app-edit-add-modal>
+      <button class="btn btn-lg btn-outline-primary" (click)="deleteProduct()">Del</button>
+    </div>
+  </div>
+</div>
+<hr>
